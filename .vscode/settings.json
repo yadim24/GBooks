@@ -1,7 +1,7 @@
 {
   "workbench.colorCustomizations": {
-    "activityBar.background": "#56248f",
-    "statusBar.background": "#56248f"
+    "activityBar.background": "#0c333a",
+    "statusBar.background": "#0c333a"
   },
   "typescript.tsdk": "node_modules/typescript/lib",
   "files.exclude": {
