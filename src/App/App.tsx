@@ -1,50 +1,11 @@
 import '@fontsource-variable/montserrat';
-import SearchOutlinedIcon from '@mui/icons-material/SearchOutlined';
-import {
-  InputAdornment,
-  OutlinedInput,
-  ThemeProvider,
-  Typography,
-  createTheme,
-} from '@mui/material';
 import { Search } from 'lucide-react';
-import { ReactElement } from 'react';
+import { ReactElement, StrictMode } from 'react';
 import styles from './App.module.css';
-
-const theme = createTheme({
-  palette: {
-    primary: {
-      main: '#3d3d3d',
-    },
-    secondary: {
-      main: '#ffffff',
-    },
-    text: {
-      primary: '#fff',
-    },
-  },
-  typography: {
-    fontFamily: 'Montserrat Variable, sans-serif',
-  },
-});
 
 export const App = (): ReactElement => {
   return (
-    <ThemeProvider theme={theme}>
-      <Typography variant="h4" component="h1" sx={{ fontWeight: 700 }}>
-        Search for books
-      </Typography>
-      <OutlinedInput
-        id="search-field"
-        color="primary"
-        type="search"
-        sx={{ bgcolor: '#fff' }}
-        endAdornment={
-          <InputAdornment position="end">
-            <SearchOutlinedIcon color="primary" />
-          </InputAdornment>
-        }
-      />
+    <StrictMode>
       <div className={styles.main}>
         <div className={styles.header}>
           <h1 className={styles['header-text']}>Search for books</h1>
@@ -70,6 +31,6 @@ export const App = (): ReactElement => {
           </div>
         </div>
       </div>
-    </ThemeProvider>
+    </StrictMode>
   );
 };
